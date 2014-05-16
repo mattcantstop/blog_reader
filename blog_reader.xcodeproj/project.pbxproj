@@ -19,6 +19,8 @@
 		C9E5131819265A3500C476C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E5130019265A3500C476C1 /* UIKit.framework */; };
 		C9E5132019265A3500C476C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9E5131E19265A3500C476C1 /* InfoPlist.strings */; };
 		C9E5132219265A3500C476C1 /* blog_readerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E5132119265A3500C476C1 /* blog_readerTests.m */; };
+		C9E5132C19265ACC00C476C1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E5132B19265ACC00C476C1 /* MainStoryboard.storyboard */; };
+		C9E5132F19265D6000C476C1 /* TTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E5132E19265D6000C476C1 /* TTTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		C9E5131D19265A3500C476C1 /* blog_readerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blog_readerTests-Info.plist"; sourceTree = "<group>"; };
 		C9E5131F19265A3500C476C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9E5132119265A3500C476C1 /* blog_readerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blog_readerTests.m; sourceTree = "<group>"; };
+		C9E5132B19265ACC00C476C1 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C9E5132D19265D6000C476C1 /* TTTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTableViewController.h; path = ../TTTableViewController.h; sourceTree = "<group>"; };
+		C9E5132E19265D6000C476C1 /* TTTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTableViewController.m; path = ../TTTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +114,11 @@
 			children = (
 				C9E5130B19265A3500C476C1 /* TTAppDelegate.h */,
 				C9E5130C19265A3500C476C1 /* TTAppDelegate.m */,
+				C9E5132D19265D6000C476C1 /* TTTableViewController.h */,
+				C9E5132E19265D6000C476C1 /* TTTableViewController.m */,
 				C9E5130E19265A3500C476C1 /* Images.xcassets */,
 				C9E5130319265A3500C476C1 /* Supporting Files */,
+				C9E5132B19265ACC00C476C1 /* MainStoryboard.storyboard */,
 			);
 			path = blog_reader;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E5132C19265ACC00C476C1 /* MainStoryboard.storyboard in Resources */,
 				C9E5130719265A3500C476C1 /* InfoPlist.strings in Resources */,
 				C9E5130F19265A3500C476C1 /* Images.xcassets in Resources */,
 			);
@@ -240,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E5132F19265D6000C476C1 /* TTTableViewController.m in Sources */,
 				C9E5130D19265A3500C476C1 /* TTAppDelegate.m in Sources */,
 				C9E5130919265A3500C476C1 /* main.m in Sources */,
 			);
