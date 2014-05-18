@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91AC8C31929221B0078A22B /* TTBlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = C91AC8C21929221B0078A22B /* TTBlogPost.m */; };
 		C9E512FD19265A3500C476C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E512FC19265A3500C476C1 /* Foundation.framework */; };
 		C9E512FF19265A3500C476C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E512FE19265A3500C476C1 /* CoreGraphics.framework */; };
 		C9E5130119265A3500C476C1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E5130019265A3500C476C1 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C91AC8C11929221B0078A22B /* TTBlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBlogPost.h; sourceTree = "<group>"; };
+		C91AC8C21929221B0078A22B /* TTBlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBlogPost.m; sourceTree = "<group>"; };
 		C9E512F919265A3500C476C1 /* blog_reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blog_reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E512FC19265A3500C476C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9E512FE19265A3500C476C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				C9E5130E19265A3500C476C1 /* Images.xcassets */,
 				C9E5130319265A3500C476C1 /* Supporting Files */,
 				C9E5132B19265ACC00C476C1 /* MainStoryboard.storyboard */,
+				C91AC8C11929221B0078A22B /* TTBlogPost.h */,
+				C91AC8C21929221B0078A22B /* TTBlogPost.m */,
 			);
 			path = blog_reader;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E5132F19265D6000C476C1 /* TTTableViewController.m in Sources */,
+				C91AC8C31929221B0078A22B /* TTBlogPost.m in Sources */,
 				C9E5130D19265A3500C476C1 /* TTAppDelegate.m in Sources */,
 				C9E5130919265A3500C476C1 /* main.m in Sources */,
 			);
@@ -448,6 +454,7 @@
 				C9E5132719265A3500C476C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9E5132819265A3500C476C1 /* Build configuration list for PBXNativeTarget "blog_readerTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				C9E5132A19265A3500C476C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "TTTableViewController.h"
+#import "TTBlogPost.h"
 
 @interface TTTableViewController ()
 
@@ -26,6 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    TTBlogPost *blogPost = [[TTBlogPost alloc] init];
+    blogPost.title = @"some title";
+    blogPost.author = @"an author";
 
     NSURL *blogURL = [NSURL URLWithString:@"http:blog.teamtreehouse.com/api/get_recent_summary/"];
     NSData*jsonData = [NSData dataWithContentsOfURL: blogURL];
