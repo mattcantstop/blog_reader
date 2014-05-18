@@ -32,6 +32,12 @@
                                       @"Getting a Job in Web Design and Development",
                                       @"Treehouse Show Episode 13",
                    nil];
+    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"The Missing Widget In Android",@"title",@"Ben Jakuben",@"author", nil];
+    NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"My First iPhone App With API", @"title",@"Matthew Duff",@"author",nil];
+    NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"A Beautiful, Sunny Day",@"title",@"Kylee Duff",@"author", nil];
+    NSLog(@"%@", blogPost1);
+    NSLog(@"%@", blogPost2);
+    NSLog(@"%@", blogPost3);
 }
 
 - (void)didReceiveMemoryWarning
