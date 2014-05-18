@@ -27,15 +27,15 @@
 {
     [super viewDidLoad];
 
-    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"The Missing Widget In Android",@"title",@"Ben Jakuben",@"author", nil];
-    NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"My First iPhone App With API", @"title",@"Matthew Duff",@"author",nil];
-    NSDictionary *blogPost3 = [NSDictionary dictionaryWithObjectsAndKeys:@"A Beautiful, Sunny Day",@"title",@"Kylee Duff",@"author", nil];
-    NSLog(@"%@", blogPost1);
-    NSLog(@"%@", blogPost2);
-    NSLog(@"%@", blogPost3);
+    NSURL *blogURL = [NSURL URLWithString:@"http:blog.teamtreehouse.com/api/get_recent_summary/"];
+    NSData*jsonData = [NSData dataWithContentsOfURL: blogURL];
     
-    self.blogPosts = [NSArray arrayWithObjects: blogPost1, blogPost2, blogPost3,
-                   nil];
+    NSLog(@"%@", jsonData);
+    
+    NSError *error = nil;
+    NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    
+    self.blogPosts = [dataDictionary objectForKey:@"posts"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,6 +64,7 @@
     
     NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     cell.textLabel.text = [blogPost valueForKey:@"title"];
+    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
     
     return cell;
 }
