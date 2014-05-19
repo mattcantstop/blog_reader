@@ -10,4 +10,16 @@
 
 @implementation TTBlogPost
 
+- (id) initWithTitle:(NSString *)title {
+    self = [super init];
+    if ( self ) {
+        self.title = title;
+    }
+    return self;
+}
+
+
++ (id) blogPostWithTitle:(NSString *)title {
+    return [[self alloc] initWithTitle:title];
+}
 @end
