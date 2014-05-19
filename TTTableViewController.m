@@ -31,8 +31,6 @@
     NSURL *blogURL = [NSURL URLWithString:@"http:blog.teamtreehouse.com/api/get_recent_summary/"];
     NSData*jsonData = [NSData dataWithContentsOfURL: blogURL];
     
-    NSLog(@"%@", jsonData);
-    
     NSError *error = nil;
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
@@ -42,6 +40,8 @@
     for (NSDictionary *bpDictionary in blogPosts) {
         TTBlogPost *blogPost = [TTBlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
         blogPost.author = [bpDictionary objectForKey:@"author"];
+        blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
+        blogPost.date = [bpDictionary objectForKey:@"date"];
         [self.blogPosts addObject:blogPost];
     }
     
@@ -72,9 +72,17 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     TTBlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+    
+    if ( [blogPost.thumbnail isKindOfClass:[NSString class]]) {
+        NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+        UIImage *image = [UIImage imageWithData:imageData];
+        cell.imageView.image = image;
+    } else {
+        cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+    }
+
     cell.textLabel.text = blogPost.title;
-    cell.detailTextLabel.text = blogPost.author;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", blogPost.author, blogPost.date];
     
     return cell;
 }
