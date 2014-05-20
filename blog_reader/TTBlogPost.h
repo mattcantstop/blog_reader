@@ -14,11 +14,12 @@
 @property (nonatomic, strong) NSString *author;
 @property (nonatomic, strong) NSString *thumbnail;
 @property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSURL *url;
 
 - (id) initWithTitle:(NSString *)title;
 + (id) blogPostWithTitle:(NSString *)title;
 
 - (NSURL *) thumbnailURL;
-- (NSString) formattedDate;
+- (NSString *) formattedDate;
 
 @end

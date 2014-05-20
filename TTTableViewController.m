@@ -42,6 +42,7 @@
         blogPost.author = [bpDictionary objectForKey:@"author"];
         blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
         blogPost.date = [bpDictionary objectForKey:@"date"];
+        blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
         [self.blogPosts addObject:blogPost];
     }
     
@@ -72,7 +73,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     TTBlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
-    
     if ( [blogPost.thumbnail isKindOfClass:[NSString class]]) {
         NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
         UIImage *image = [UIImage imageWithData:imageData];
@@ -82,7 +82,7 @@
     }
 
     cell.textLabel.text = blogPost.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", blogPost.author, blogPost.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", blogPost.author, [blogPost formattedDate]];
     
     return cell;
 }
